@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes in JS</title>
+    
+
+</head>
+<body>
+
+    There are 8 basic data types in JavaScript.<br/>
+
+1.number for numbers of any kind: integer or floating-point, integers are limited by ±253.<br/>
+1.bigint is for integer numbers of arbitrary length.<br/>
+3.string for strings. A string may have zero or more characters, there’s no separate single-character type.<br/>
+4.boolean for true/false.<br/>
+5.null for unknown values – a standalone type that has a single value null.<br/>
+6.undefined for unassigned values – a standalone type that has a single value undefined.<br/>
+7.object for more complex data structures.<br/>
+8.symbol for unique identifiers.<br/>
+
+The typeof operator allows us to see which type is stored in a variable.<br/>
+
+Two forms: typeof x or typeof(x).<br/>
+Returns a string with the name of the type, like "string".<br/>
+For null returns "object" – this is an error in the language, it’s not actually an object.<br/>
+The number type represents both integer and floating point numbers.<br/>
+<p>
+
+There are many operations for numbers, e.g. multiplication *, division /, addition +, subtraction -, and so on.<br/>
+
+Besides regular numbers, there are so-called “special numeric values” which also belong to this data type:<br/>
+
+let n = 123;<br/>
+document.write("int",n)<br/>
+n = 12.345;<br/>
+document.write("float",n)<br/>
+
+In JavaScript, the “number” type cannot represent integer values larger than (253-1) (that’s 9007199254740991), or less than -<br/>(-253-1) for negatives. It’s a technical limitation caused by their internal representation.<br/>
+
+For most purposes that’s quite enough, but sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.<br/>
+
+BigInt type was recently added to the language to represent integers of arbitrary length.<br/>
+
+A BigInt value is created by appending n to the end of an integer:*/<br/>
+const bigInt = 1234567890123456789012345678901234567890n;<br/>
+document.write("bigint=",bigInt)<br/>
+
+A string in JavaScript must be surrounded by quotes.<br/>
+let str = "Hello";<br/>
+document.write(str)<br/>
+let str2 = 'Single quotes are ok too';<br/>
+document.write(str2)<br/>
+let phrase = `can embed another ${str}`;<br/>
+
+
+--The boolean type has only two values: true and false.<br/>
+
+This type is commonly used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”.*/<br/>
+var a=2,b=3;<br/>
+c=a>b;<br/>
+document.write("a=2"," ","b=3",c)<br/>
+
+The special null value does not belong to any of the types described above.<br/>
+
+It forms a separate type of its own which contains only the null value:*/<br/>
+let age = null;<br/>
+document.write(age);<br/>
+
+The special value undefined also stands apart. It makes a type of its own, just like null.<br/>
+
+The meaning of undefined is “value is not assigned”.<br/>
+
+If a variable is declared, but not assigned, then its value is undefined:<br/>
+let weight = 100;<br/>
+
+ change the value to undefined<br/>
+weight = undefined;<br/>
+
+alert(weight);  "undefined"<br/>
+
+
+    
+</body>
+</html>
+</script>
